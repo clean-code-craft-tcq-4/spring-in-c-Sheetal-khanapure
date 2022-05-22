@@ -13,7 +13,7 @@ void ledAlerter()
 alerter_funcptr alerters[0] = &emailAlerter;
 alerter_funcptr alerters[1] = &ledAlerter;
 
-void check_and_alert(maxThreshold,alerters,computedStats);
+void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
     if(computedStats.max>maxThreshold)
     {
