@@ -12,13 +12,13 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     for(loop_index=0;loop_index<setlength;loop_index++)
     {
         sum_all+= *numberset[loop_index];
-        if(*numberset[loop_index]<minimum)
+        if(*(numberset+loop_index)<minimum)
         {
-            minimum = *numberset[loop_index];
+            minimum = *(numberset+loop_index);
         }
-        if(*numberset[loop_index]<maximum)
+        if(*(numberset+loop_index)<maximum)
         {
-            maximum = *numberset[loop_index];
+            maximum = *(numberset+loop_index);
         }
     }
     s.average = sum_all/numberset;
