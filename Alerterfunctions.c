@@ -9,8 +9,8 @@ void ledAlerter()
   ledAlertCallCount = 1;
 }
 
-alerter_funcptr alerters[0] = &emailAlerter;
-alerter_funcptr alerters[1] = &ledAlerter;
+//alerter_funcptr alerters[0] = &emailAlerter;
+//alerter_funcptr alerters[1] = &ledAlerter;
 
 void check_and_alert(maxThreshold,alerters,computedStats);
 {
