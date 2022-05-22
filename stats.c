@@ -6,9 +6,9 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     s.min = 0;
     s.max = 0;
     float sum_all=0;
-    loop_index=0;
-    minimum = *numberset[0];
-    maximum = *numberset[0];
+    int loop_index=0;
+    float minimum = *numberset[0];
+    float maximum = *numberset[0];
     for(loop_index=0;loop_index<setlength;loop_index++)
     {
         sum_all+= *numberset[loop_index];
